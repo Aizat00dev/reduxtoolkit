@@ -16,7 +16,10 @@ export const Counter = createSlice({
         },
 
         decrement:(state) => {
-            state.count -= 1
+            if(state.count > 0){
+                state.count -= 1
+            }
+            
         },
 
         multByAmount:(state, action) =>{
